@@ -8,6 +8,7 @@ class Api::V1::Gactive::UsersController < BaseController
   def create
     user = User.new(user_params)
     if user.save
+      SayWelcomeJob.perform_later
       response_created message: 'Usuario guardado'
     else
       response_error code: 400, message: user.errors.full_messages

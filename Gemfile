@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -9,28 +11,25 @@ gem 'rails', '~> 6.0.1'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.7'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+# Simple, efficient background processing for Ruby
+gem 'sidekiq'
+# Use Redis adapter to run Action Cable in production
+gem 'redis', '~> 4.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Brings the RSpec testing framework to Ruby on Rails as a drop-in alternative
   # to its default testing framework, Minitest.
-  gem 'rspec-rails', '~> 4.0.0.beta2'
+  gem 'rspec-rails', '~> 4.0.0.beta3'
+  # Factory_bot is a fixtures replacement with a straightforward definition
+  # syntax, support for multiple build strategies (saved instances, unsaved
+  # instances, attribute hashes, and stubbed objects), and support for multiple
+  # factories for the same class (user, admin_user, and so on), including
+  # factory inheritance.
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -46,7 +45,7 @@ group :development do
   # for security vulnerabilities.
   gem 'brakeman'
   # Autoload dotenv in Rails.
-  gem "dotenv-rails"
+  gem 'dotenv-rails'
   # Provides a framework and DSL for defining and using factories - less
   # error-prone, more explicit, and all-around easier to work with than fixtures
   gem 'factory_bot'
@@ -61,7 +60,7 @@ group :development do
   gem 'irbtools', require: 'irbtools/binding'
   # When mail is sent from your application, Letter Opener will open a preview
   # in the browser instead of sending.
-  gem "letter_opener"
+  gem 'letter_opener'
   # Listens to file modifications and notifies you about the changes.
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Use Pry as your rails console
