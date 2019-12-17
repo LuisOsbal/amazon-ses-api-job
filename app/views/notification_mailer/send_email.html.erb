@@ -1,0 +1,24 @@
+<% message.subject = 'Bienvenido a InstaFit' %>
+<html style="background: #F7FAFC;font-size: 18px;">
+  <body style="background: #F7FAFC;font-size: 1rem;">
+    <div class="wrapper" style="width: 600px;margin: 0 auto;padding: 50px 0;">
+      <% if @user.app.eql?(1)%>
+        <img class="logo" src="http://ddnq0lt00f13b.cloudfront.net/production/assets/workouts/InstaFit_workouts-fd2e685b46fc4bf215a46c0ba3b312052269d08e0d234b8d7137c896403773e2.png" style="width: 180px;display: block;margin: 0 auto;margin-bottom: 50px;">
+      <% else %>
+        <img class="logo" src="http://ddnq0lt00f13b.cloudfront.net/production/assets/gym/InstaFit_GYM-3de35490ca078b2ca6b28af00d59d585a49e77739719d8ad2ec2d6e2282e9602.png" style="width: 180px;display: block;margin: 0 auto;margin-bottom: 50px;">
+      <% end %>
+    <main style="background: white;border-radius: 8px;">
+      <img class="hero" src="https://s3.amazonaws.com/hello.zonos.com/images/emailHead.png" style="border-top-left-radius: 8px;border-top-right-radius: 8px;">
+      <div class="content" style="background:white;color:#718096;padding: 50px;line-height: 1.5;text-align: center;">
+        <h1 style="color:#2d3748;font-size: 1.875rem;font-weight: 500;margin-top: 0;">Hola <%= @user.name %></h1>
+        Congratulations! Your Instafit account setup is complete. You are now ready to offer your international customers duty and tax quotes from the most accurate landed cost engine on the planet.
+
+        <a href="https://instafitgym.app.link/?dp=partner/10" target="_blank" style="color: inherit;text-decoration: none;">
+          <button style="background: #448EE1;color: white;border: 0;padding: 15px 25px;display: block;border-radius: 8px;margin: 0 auto;font-size: 1rem;text-decoration: none;margin-top: 50px;cursor: pointer;">
+            Sign in to InstaFit
+          </button>
+        </a>
+      </div>
+    </main>
+    </div>
+</html>

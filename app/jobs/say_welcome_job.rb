@@ -1,7 +1,11 @@
 class SayWelcomeJob < ApplicationJob
-  queue_as :default
+  queue_as :critical
 
   def perform(*args)
-    puts "test"
+    users = User.welcome
+    users.each do |user|
+      NotificationMailer.send_email(user).deliver
+      user.update(email_sent: true)
+    end
   end
 end
