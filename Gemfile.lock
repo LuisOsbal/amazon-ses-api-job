@@ -60,11 +60,6 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.0)
     awesome_print (1.8.0)
-    aws-ses (0.6.0)
-      builder
-      mail (> 2.2.5)
-      mime-types
-      xml-simple
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
@@ -204,9 +199,6 @@ GEM
     memory_profiler (0.9.14)
     method_source (0.9.2)
     methodfinder (2.2.1)
-    mime-types (3.3)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.1009)
     mimemagic (0.3.3)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
@@ -237,7 +229,7 @@ GEM
     public_suffix (4.0.1)
     puma (4.3.1)
       nio4r (~> 2.0)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-protection (2.0.7)
       rack
     rack-test (1.1.0)
@@ -376,7 +368,6 @@ GEM
     websocket-extensions (0.1.4)
     wirb (2.2.0)
       paint (>= 0.9, < 3.0)
-    xml-simple (1.1.5)
     zeitwerk (2.2.2)
 
 PLATFORMS
@@ -384,7 +375,6 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
-  aws-ses (~> 0.6.0)
   better_errors (~> 2.1, >= 2.1.1)
   binding_of_caller (~> 0.7.2)
   bootsnap (>= 1.4.2)
